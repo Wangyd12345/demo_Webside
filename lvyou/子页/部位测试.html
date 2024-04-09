@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>部位测试</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font: 14px/1.5"Microft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
+    color: #333;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+i{
+    font-style: normal;
+}
+
+/* 内容 */
+.box{
+    margin: 0 auto;
+    /* width: 1240px; */
+    height: 1300px;
+    /* background-color: #a6d7df; */
+  }
+  .yinying{
+
+    box-shadow: 2px 5px 10px 1px rgb(0,0,0,5);
+  }
+    .food{
+      float: left;
+      margin-left: 115px;
+      /* width: 610px; */
+      height: 1300px;
+      margin-top: 20px;
+    }
+    .food h2{
+      margin: 10px ; 
+      text-align: center;
+      color: #201f1f;
+    }
+    .food h2 img{
+      height: 70px;
+      transform: translateY(10px);
+    }
+
+    /* 美食推荐 */
+    .nav1{
+      margin-top: 20px;
+      height: 40px;
+      background-color: rgba(240, 147, 60, 0.258);
+    }
+    .nav1 ul{
+      display: flex;
+    }
+    .nav1 li{
+      float: left;
+      flex: 1;
+    }
+    .nav1 li a{
+      padding: 0 60px;
+      /* width: 122px; */
+      height: 40px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 20px;
+      line-height: 40px;
+      color: #fff;
+      border-right: 1px solid #e0e0e0;
+    }
+    .nav1 ul li:last-child a{
+      border-right: 0;
+    }
+    .nav1 li a:hover{
+background-color: #0093cd5c;
+    }
+
+    .bd{
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 2px 5px 10px 1px rgb(0,0,0,5);
+  }
+/* 美食左边（一图+二行） */
+    .bd .left{
+      width: 610px;      
+      background-color: #ffffffaf;
+      margin-left: 0;
+     /*  box-shadow: 2px 5px 10px 1px rgb(0,0,0,5); */
+    }
+    .one{
+      margin-top: 0px;
+      width: 610px;
+      height: 200px;
+       background-color: #fff; 
+    }
+    /* 美食右边（三行） */
+    .bd .right{
+      width: 610px;
+      background-color: #ffffffaf;
+      margin-right: 0;
+     /*  box-shadow: 2px 5px 10px 1px rgb(0,0,0,5); */
+    }
+    
+    .bd ul{
+      display: flex;
+      width: 610px;
+      height: 200px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* border-bottom: 0.5px solid lightslategray; */
+    }
+
+    .bd li .pic{
+      width: 310px;
+      height: 200px;
+      transform: translateX(-32px);
+    }
+
+    .bd li .text{
+      float:inline-end;
+      width: 290px;
+      transform: translateX(260px) translateY(-200px);
+    }
+
+    .bd li h2{
+      font-weight: 700;
+    font-size: 29px;
+    color: #222426;
+    margin-right: 8px;
+    margin-top: revert-layer;
+    line-height: 0.2rem;
+    font-family: 宋体;
+      transform: translateY(15px);
+    }
+.bd li a{
+  text-decoration: none;
+    }
+    .bd li p{
+      font-size: 21px;
+    color: #858687;
+    /* line-height: 0.14rem; */
+    margin-right: 0.06rem;
+    margin-top: 33px;
+    white-space: nowrap;
+    }
+
+    .bd li .score{
+      color: #ff8000;
+    font-size: 30px;
+    font-weight: 500;
+    }
+
+    .bd li .grade{
+      color: #ff8000;
+      font-size: 25px;
+      font-weight: 500;
+    }
+    .bd li p i{
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .bd li p strong{
+      color: #858687;
+      font-weight: 400;
+    }
+
+    .bd li span{
+      float: right;
+    font-size: 13px;
+    font-weight: 553;
+    font-family: 宋体;
+    color: rgb(255, 128, 0);
+    background-color: rgb(255, 248, 225);
+}
+
+    .bd li span img{
+      margin-right: 1px;
+      /* vertical-align 行内块和行内垂直方向对齐方式 */
+      vertical-align: middle;
+      height: 20px;
+      border-radius: 50%;
+    }
+</style>
+<body>
+  <!-- 内容 -->
+  <div class="box">
+    <div class="food">
+    <div class="yinying">
+      <!-- 美食推荐 -->
+  <h2><img src="./wangyetupian/美食推荐.png" alt=""> </h2>
+  <div class="nav1">
+  <ul>
+    <li><a href="#">热榜</a></li>
+    <li><a href="#">老字号</a></li>
+    <li><a href="#">地方特色</a></li>
+  
+  </ul>
+  </div>
+  <div class="bd">
+  <div class="left">
+  <div class="one"><!-- 江西特色美食那个图 -->
+      <img src="./wangyetupian/美食横图1.webp" alt="">    
+    </div>
+        <ul>
+        <li><a href="#">
+          <div class="pic"><img src="./wangyetupian/炭亲干锅.png" alt=""></div>
+          <div class="text">
+            <h2>炭亲干锅（大顺巷）</h2>
+            <p><i class="score">4.8 </i> <i class="grade">超棒</i> &nbsp;&nbsp;
+             <strong>赣菜 &nbsp;&nbsp;￥63/人</strong>
+             <br>
+             <img src="./wangyetupian/cursor.svg" alt="">
+            <strong>百盛大顺港</strong></p>
+            <span><img src="./wangyetupian/头像2.jpg" alt="">
+             "纯私心！去了不下五六次、太好吃了！去了必吃的一家！"</span> 
+          </div>
+        </a></li>
+
+    
+
+        <li><a href="#">
+          <div class="pic"><img src="./wangyetupian/蟹脚捞粉.png" alt=""></div>
+          <div class="text">
+            <h2>蟹脚捞粉</h2>
+            <p><i i class="score">4.7 </i><i class="grade">超棒</i> &nbsp;&nbsp;
+             <strong>米粉 &nbsp;&nbsp;￥30/人</strong>
+             <br>
+             <img src="./wangyetupian/cursor.svg" alt="">
+            <strong>西湖区福山花园</strong></p>
+            <span><img src="./wangyetupian/头像3.jpg" alt="">
+             "虽然知道南昌的粉好吃但是没想到！这真的也太好吃了吧！！"</span> 
+          </div>
+        </a></li>
+        </ul>
+    </div>
+  
+  
+    <div class="right">
+        <ul>
+        <li><a href="#">
+          <div class="pic"><img src="./wangyetupian/红烧鸡爪.png" alt=""></div>
+          <div class="text">
+            <h2>红烧鸡爪</h2>
+            <p><i i class="score">4.4 </i> <i class="grade">推荐</i> &nbsp;&nbsp;
+             <strong>小吃快餐 &nbsp;&nbsp;￥48/人</strong>
+             <br>
+             <img src="./wangyetupian/cursor.svg" alt="">
+            <strong>青山湖区万达广场</strong></p>
+            <span><img src="./wangyetupian/头像7.jpg" alt="">
+             "鸡爪这样吃了，简直逆天了！每一根鸡爪包裹着香辣浓郁的酱汁，一口下去，胶质十足，满满的胶原蛋白，吃一口根本就停不下来了……"</span> 
+          </div>
+        </a></li>
+
+  
+
+        <li><a href="#">
+          <div class="pic"><img src="./wangyetupian/碎椒炒蛋.png" alt=""></div>
+          <div class="text">
+            <h2>碎椒炒蛋</h2>
+            <p><i i class="score">4.3 </i><i class="grade">推荐</i> &nbsp;&nbsp;
+             <strong>家常菜 &nbsp;&nbsp;￥37/人</strong>
+             <br>
+             <img src="./wangyetupian/cursor.svg" alt="">
+            <strong>青山湖区南京东路468号</strong></p>
+            <span><img src="./wangyetupian/头像5.png" alt="">
+             "!!!这个费饭神菜简直惊艳我！巨辣，但是拌饭真的停不下来，一边冒汗一边往嘴里塞，这个我按头安利"</span> 
+          </div>
+        </a></li>
+
+
+        <li><a href="#">
+          <div class="pic"><img src="./wangyetupian/三杯鸡.png" alt=""></div>
+          <div class="text">
+            <h2>三杯鸡</h2>
+            <p><i i class="score">4.5 </i> <i class="grade">推荐</i> &nbsp;&nbsp;
+             <strong>中餐 &nbsp;&nbsp;￥119/人</strong>
+             <br>
+             <img src="./wangyetupian/cursor.svg" alt="">
+            <strong>阳明路大众购物中心</strong></p>
+            <span><img src="./wangyetupian/头像6.jpg" alt="">
+             "这家店满满一锅鸡，鸡肉都很大块，入口味道很好，也不是很辣，吃不了辣的朋友也可以点！"</span> 
+          </div>
+        </a></li>
+      </ul>
+  </div>
+  </div>
+      </div>
+</body>
+</html>

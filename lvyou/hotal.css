@@ -1,0 +1,56 @@
+
+*{margin: 0;
+    padding: 0;
+}
+.biaoti{
+    margin-left: 50px;
+    margin-top: 10px;
+    color: #FAFAFA;
+}
+.wrapper{
+    width:1240px ;
+    margin: 0 auto;
+}
+.container {
+    margin: 40px auto;
+    /* float: right; */
+    /* background-color: #fff; */
+    padding-left: 20px;
+    background: linear-gradient(51deg, rgba(206, 212, 228, 0.53) 20%,rgba(123, 199, 218, 0.8) 97%);
+    width: 840px;
+    height: 510px;
+}
+
+.hotel {
+    margin-bottom: 20px;
+}
+.button{
+    margin-left: 680px;
+}
+body{
+    background-image: url("首图8.webp");
+}
+#likeBtn{
+    width: 48px;
+    height: 36px;
+    background-color: #b3e19d;
+   color: #000000;
+    border: 0;
+}
+#commentBtn{
+    width: 48px;
+    height: 36px;
+    background-color: #b3e19d;
+    color: #000000;
+    border: 0;
+}
+#likesCount{
+   float: left;
+   margin-left: 680px;
+    color: #FAFAFA;
+}
+#commentsCount{
+    float: left;
+   margin-left: 50px;
+    color: #FAFAFA;
+}

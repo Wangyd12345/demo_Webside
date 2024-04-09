@@ -1,0 +1,107 @@
+/* 首页样式 */
+/* 版心 */
+.wrapper{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+body{
+    background-color: #f3f5f7;
+}
+
+/*盒子们*/
+/* 弹性容器 */
+.box{
+    width: 100%;
+    height: 1569px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*最下面*/
+/* 帮助中心 */
+.footer {
+    background: #ffffff8b;
+    margin-top: 125px;
+}
+
+.help {
+    margin-top: 20px;
+    display: flex;
+    height: 200px;
+    min-width: 1080px;
+    /* 垂直居中 */
+    align-items: center;
+    /* 水平居中 */
+    justify-content: center;
+}
+/* left */
+.help .left {
+    display: flex;
+}
+.help .left dl {
+    margin-right: 84px;
+}
+.help .left dl:last-child {
+    margin-right: 0;
+}
+.help .left dt {
+    color: black;
+    margin-bottom: 30px;
+    font-size: 18px;
+    padding-left: 36px;
+}
+.help .left dd {
+    margin-bottom: 10px;
+    transform: translateX(37px);
+}
+.help .left a {
+    color: #333333;
+}
+
+/* 版权 */
+.copyright {
+    text-align: center;
+}
+.copyright p {
+    color: #a1a1a1;
+}
+.copyright p a {
+    margin: 0 10px;
+    color: #333333;
+}

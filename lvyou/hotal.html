@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>酒店信息</title>
+    <link rel="stylesheet" href="hotal.css">
+    <script src="js/jquery-3.7.1.js"></script>
+</head>
+<body>
+<h3 class="biaoti">酒店信息</h3>
+<hr>
+<div class="warpper container">
+    <br>
+    <p>酒店名称:南昌古北熙悦酒店</p>
+    <br>
+    <p>价格：320/晚</p>
+    <br>
+    <p>地址：南昌市东湖区三经路26号</p>
+    <br>
+    <p>电话：0791</p>
+    <br>
+    <p>描述信息：这家豪华酒店位于市中心,客人可以享受免费无线网络、健身房和室外游泳池。</p>
+    <br>
+     <p>酒店图片：</p>
+    <br>
+    <img src="hotel1.jpg" height="225" width="300"/>
+</div>
+<!-- 添加点赞和评论按钮 -->
+<div class="button">
+    <button id="likeBtn" >点赞<div id="result"></div></button>
+    <button id="commentBtn" onclick="showCommentInput()">评论</button>
+</div>
+<!--点赞量-->
+<span id="likesCount">0</span>
+<span id="commentsCount">0</span>
+<!--<span id="comment">0</span>-->
+<!-- 添加评论输入框 -->
+<br>
+<div id="commentInput" class="button" style="display: none;">
+    <input type="text" placeholder="请输入评论" id="commentsText">
+    <button id="submit" onclick="submitComment()">发布评论</button>
+</div>
+
+
+<script>
+
+    function showCommentInput() {
+        var commentInput = document.getElementById("commentInput");
+        commentInput.style.display = "block";
+    }
+
+    function submitComment() {
+        var commentInput= document.getElementById("commentInput");
+        commentInput.style.display="none";
+    }
+    $("#likeBtn").click(likeButtonClick);
+    $("#submit").click(commentButtonClick);
+
+    function likeButtonClick() {
+        var postId = 1; // 替换成实际的postId
+        $.ajax({
+            url: "http://localhost:8080/brand_case_war_exploded/ServletLikes",
+            type: "POST",
+            data: { postId: 1, action: "like"},
+            dataType: "json",
+            success: function(response) {
+                console.log(response)
+                document.getElementById('likesCount').innerHTML = response.likes;
+                // 在页面中更新点赞数
+                console.log(response);
+            },
+            error: function() {
+                console.log("点赞失败");
+            }
+        });
+    }
+
+    function commentButtonClick() {
+        var postId = 1; // 替换成实际的postId
+        var commentText = $("#commentsText").val();
+        console.log(commentText)
+        $.ajax({
+            url: "http://localhost:8080/brand_case_war_exploded/ServletLikes",
+
+            type: "POST",
+            data: { postId: 1, action: "comment", comment: commentText },
+            dataType: "json",
+            success: function(response) {
+                // 在页面中更新评论数
+                console.log(response)
+                document.getElementById('commentsCount').innerHTML = response.commentCount;
+               // document.getElementById('comment').innerHTML = response.commentsList;
+            },
+            error: function() {
+                console.log("评论失败");
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
+

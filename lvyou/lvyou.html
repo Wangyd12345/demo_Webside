@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>江西文旅</title>
+    <link rel="shortcut icon" href="./01.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="lvyou.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/banner.js"
+            async
+    ></script>
+    <script src="lvyou.js"></script>
+  </head>
+  <body>
+
+      <!-- 头部 -->
+      <div class="top">
+        <!-- logo -->
+        <div class="logo">
+          <h1><a href="#">江西文旅</a></h1></div>
+
+        <!-- 搜索 -->
+        <div id="app">
+          <div class="search">
+              <div class="searchBox">
+                <input type="text" id="keywordInput" class="searchTerm" v-model="keyword" placeholder="搜索酒店/门票/攻略" @focus="clearText" />
+                <div class="searchButtonContainer">
+                  <button type="button" class="searchButton" @click="search" :disabled="!isValidKeyword"> <!-- 修改成普通按钮，移除form提交 -->
+                    <i class="search-icon icon"></i>
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+        <!-- 右边 -->
+       <div class="btn-wrap">
+        <ul class="header-account">
+          <a href="#"><li class="home-header">
+            <div class="home-header-login">
+              <button class="iusnp">
+                <i class="pc-home-account"></i>
+                <form  action="" method="post">
+                <div class="home-header-login-title">
+                <span id="loginForm" >请登录</span>
+                </div>
+                </form>
+              </button>
+            </div>
+          </li>
+          </a>
+          <li class="home-header-item"> 
+                        <button class="register">注册</button>
+          </li>
+        <li class="home-header-item">
+            <div class="order">
+              <i class="home-dingdan"></i>
+              <button class="order-title">浏览历史</button>
+            </div>
+          </li>
+        <li class="home-header-item"> 
+            <div class="order">
+              <i class="home-chongzhi"></i>
+            <button class="order-title">充值</button>
+          </div>
+          </li>
+
+        </ul>
+       </div>
+      </div>
+      <!-- 导航栏 -->   
+      <nav>
+        <ul>
+          <li><a href="#">首页</a></li>
+          <li><a href="#">文博</a></li>
+          <li><a href="#">红色</a></li>
+          <li><a href="#">交通</a></li>
+          <li><a href="#">活动</a></li>
+          <li><a href="子页/one.html">攻略</a></li>+
+        </ul>
+      </nav> 
+
+      <!-- 轮播图 -->
+          <div class="banner">
+              <div class="content">
+                  <ul class="piclist" >
+                      <li><a href="#" class="pic"><img src="../images/轮播图0.jpg" alt=""></a></li>
+                      <li><a href="#" class="pic"><img src="../images/轮播图1.jpg" alt=""></a></li>
+                      <li><a href="#" class="pic"><img src="../images/轮播图2.jpg" alt=""></a></li>
+                      <li><a href="#" class="pic"><img src="../images/轮播图3.jpg" alt=""></a></li>
+                      <li><a href="#" class="pic"><img src="../images/轮播图4.jpg" alt=""></a></li>
+                      <li><a href="#" class="pic"><img src="../images/轮播图5.jpg" alt=""></a></li>
+                      <li><a href="#" class="pic"><img src="../images/轮播图6.jpg" alt=""></a></li>
+                      <li><a href="#" class="pic"><img src="../images/轮播图7.jpg" alt=""></a></li>
+
+                  </ul>
+                  <ul class="dotlist">
+                    <li><a href="#" class="dot active" data="0"></a></li>
+                    <li><a href="#" class="dot"  data="1"></a></li>
+                    <li><a href="#" class="dot" data="2" ></a></li>
+                    <li><a href="#" class="dot" data="3"></a></li>
+                    <li><a href="#" class="dot" data="4" ></a></li>
+                    <li><a href="#" class="dot"  data="5"></a></li>
+                    <li><a href="#" class="dot"  data="6"></a></li>
+                    <li><a href="#" class="dot"  data="7"></a></li>
+                </ul>
+                <a href="#" class="button left-btn"></a>
+                <a href="#" class="button right-btn"></a>
+              </div>     
+            </div>
+ 
+                  
+      <!-- 底部 -->
+      <div class="inner-page">
+        <!-- 图片首部 -->
+        <div class="photo" > 
+          <div class="title">
+        <h2>出发宝藏小城</h2>
+        <a href="#">更多<i class="icon-arrow_right"></i>></a>
+      </div>
+          <!-- 图片4张（左） -->
+          <div class="grid-container">
+            <div class="grid-item" >
+              <img src="./首图1.jpg" alt="Image 1" >
+              <input type="text" class="textbox" placeholder="南昌" >
+            </div>
+            <div class="grid-item">
+              <img src="./首图6.jpg" alt="Image 2">
+              <input type="text" class="textbox" placeholder="婺源">
+            </div>
+            <div class="grid-item">
+              <img src="./首图3.jpg" alt="Image 3">
+              <input type="text" class="textbox" placeholder="上饶">
+            </div>
+          </div>
+          <!-- 横图加字 -->
+          <div class="container">
+            <div class="image-container">
+              <div class="image-item">
+                <img src="./首图8.webp" alt="Image 1">
+                <div class="text">
+                  <p>婺源</p>
+                  <p>带你云游祖国的大好河山</p>
+                </div>
+              </div>
+              <div class="image-item">
+                <img src="./首图9.webp" alt="Image 2">
+                <div class="text">
+                  <p>上饶</p>
+                  <p>江西亦是真江南,来到梦里江南</p>
+                </div>
+              </div>
+            </div>
+            <!-- 按钮 -->
+            <div class="button-container">
+              <div class="button-row">
+                <div class="button-item">
+                  <button class="capsule-button">上饶</button>
+                </div>
+                <div class="button-item">
+                  <button class="capsule-button">南昌</button>
+                </div>
+              </div>
+              <div class="button-row">
+                <div class="button-item">
+                  <button class="capsule-button">九江</button>
+                </div>
+                <div class="button-item">
+                  <button class="capsule-button">婺源</button>
+                </div>
+              </div>
+              <div class="button-row">
+                <div class="button-item">
+                  <button class="capsule-button">萍乡</button>
+                </div>
+                <div class="button-item">
+                  <button class="capsule-button">赣州</button>
+                </div>
+              </div>
+              <div class="button-row">
+                <div class="button-item">
+                  <button class="capsule-button">抚州</button>
+                </div>
+                <div class="button-item">
+                  <button class="capsule-button">鹰潭</button>
+                </div>
+              </div>
+                <div class="button-row">
+                  <div class="button-item">
+                    <button class="capsule-button">吉安</button>
+                  </div>
+                  <div class="button-item">
+                    <button class="capsule-button">宜春</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 当季热推 -->
+            <div class="hot">
+              <div class="hot-header">
+              <span class="hot-title">当季热推</span>
+              <div class="city">城市：
+                <select>
+                  <option>上饶</option>
+                  <option>九江</option>
+                  <option>萍乡</option>
+                  <option>赣州</option>
+                  <option selected>南昌</option>
+                </select>
+              </div>
+            </div>
+              <div class="recommend"> 
+                <div class="grop">
+                  <div class="pas-header">当季热卖.跟团游</div>
+                    <ul class="pas-rul">
+                    <li>
+                      <a class="pas-li" href="#" aria-label="跟团游名称：庐山+五老峰+含鄱口2日1晚，价格208元起，评分4.8分，477人已出游">
+                      <div class="pas-image-container">
+                    <img class="pas-image"  alt="庐山+五老峰+含鄱口2日1晚跟团游"  src="./排行榜1.jpg">
+                    <div class="pas-rank">1</div>
+                  </div>
+                  <div class="pas-content">
+                    <div class="pas-flex">
+                      <span class="pas-name">庐山+五老峰+含鄱口2日1晚跟团游</span>
+                    <span class="pas-price">¥
+                      <span class="pas-num">208</span>
+                      起
+                    </span>
+                    </div>
+                    <div class="pas-m4">
+                      <span class="pas-small-score">
+                      4.9分
+                      </span>
+                      <span class="pas-small">|</span>
+                      <span class="pas-small">
+                        477人出游
+                      </span>
+                    </div>
+                  </div>
+                </a>
+                  </li>
+                    <li>
+                      <a class="pas-li" href="#" aria-label="跟团游名称：南昌+庐山+景德镇5日4晚跟团游，价格868元起，评分4.9分，1414人已出游">
+                        <div class="pas-image-container">
+                      <img class="pas-image"  alt="南昌+庐山+景德镇5日4晚跟团游"  src="./排行榜2.jpg">
+                      <div class="pas-rank">2</div>
+                    </div>
+                    <div class="pas-content">
+                      <div class="pas-flex">
+                        <span class="pas-name">南昌+庐山+景德镇5日4晚跟团游</span>
+                      <span class="pas-price">¥
+                        <span class="pas-num">868</span>
+                        起
+                      </span>
+                      </div>
+                      <div class="pas-m4">
+                        <span class="pas-small-score">
+                        4.9分
+                        </span>
+                        <span class="pas-small">|</span>
+                        <span class="pas-small">
+                          1414人出游
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                    </li>
+                    <li>
+                      <a class="pas-li" href="#" aria-label="跟团游名称：望仙谷+三清山+婺源3日2晚跟团游，价格639元起，评分5.0分，612人已出游">
+                        <div class="pas-image-container">
+                      <img class="pas-image"  alt="望仙谷+三清山+婺源3日2晚跟团游"  src="./排行榜3.jpg">
+                      <div class="pas-rank">3</div>
+                    </div>
+                    <div class="pas-content">
+                      <div class="pas-flex">
+                        <span class="pas-name">望仙谷+三清山+婺源3日2晚跟团游</span>
+                      <span class="pas-price">¥
+                        <span class="pas-num">639</span>
+                        起
+                      </span>
+                      </div>
+                      <div class="pas-m4">
+                        <span class="pas-small-score">
+                        5.0分
+                        </span>
+                        <span class="pas-small">|</span>
+                        <span class="pas-small">
+                          612人出游
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                    </li>
+                    <li>
+                      <a class="pas-li" href="#" aria-label="跟团游名称：武功山+金顶2日1晚跟团游，价格360元起，评分4.7分，440人已出游">
+                        <div class="pas-image-container">
+                      <img class="pas-image"  alt="武功山+金顶2日1晚跟团游"  src="./排行榜4.jpg">
+                      <div class="pas-rank">4</div>
+                    </div>
+                    <div class="pas-content">
+                      <div class="pas-flex">
+                        <span class="pas-name">武功山+金顶2日1晚跟团游</span>
+                      <span class="pas-price">¥
+                        <span class="pas-num">360</span>
+                        起
+                      </span>
+                      </div>
+                      <div class="pas-m4">
+                        <span class="pas-small-score">
+                        4.7分
+                        </span>
+                        <span class="pas-small">|</span>
+                        <span class="pas-small">
+                          440人出游
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                    </li>
+                    <li>
+                      <a class="pas-li" href="#" aria-label="跟团游名称：萍乡+羊狮幕+庐山3日2晚跟团游，价格720元起，评分4.8分，553人已出游">
+                        <div class="pas-image-container">
+                      <img class="pas-image"  alt="武功山+金顶2日1晚跟团游"  src="./排行榜5.jpg">
+                      <div class="pas-rank">5</div>
+                    </div>
+                    <div class="pas-content">
+                      <div class="pas-flex">
+                        <span class="pas-name">萍乡+羊狮幕+庐山3日2晚跟团游</span>
+                      <span class="pas-price">¥
+                        <span class="pas-num">720</span>
+                        起
+                      </span>
+                      </div>
+                      <div class="pas-m4">
+                        <span class="pas-small-score">
+                        4.8分
+                        </span>
+                        <span class="pas-small">|</span>
+                        <span class="pas-small">
+                          553人出游
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pas-flight">
+                  <div class="pas-header">周末畅游.特价车票</div>
+                  <ul class="pas-rul">
+                    <li>
+                      <a class="pas-li"   href="#"   aria-label="九江至上饶往返车票，价格200元起，11-02去，11-03回">
+                        <div class="pas-image-container">
+                          <img class="pas-image"  src="./排行榜6.jpg" alt="九江">
+                          <div class="pas-rank">1</div>
+                        </div>
+                        <div class="pas-content">
+                          <div class="pas-flex">
+                            <span class="flight-name">九江⇌上饶</span>
+                            <span class="pas-price">¥
+                              <span class="pas-num">200</span>
+                              起
+                            </span>
+                          </div>
+                          <div class="pas-m4">
+                            <span class="pas-small">11-02去 11-03回</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="pas-li"   href="#"   aria-label="南昌至婺源往返车票，价格180元起，11-03去，11-04回">
+                        <div class="pas-image-container">
+                          <img class="pas-image"  src="./排行榜7.jpg" alt="南昌">
+                          <div class="pas-rank">2</div>
+                        </div>
+                        <div class="pas-content">
+                          <div class="pas-flex">
+                            <span class="flight-name">南昌⇌婺源</span>
+                            <span class="pas-price">¥
+                              <span class="pas-num">180</span>
+                              起
+                            </span>
+                          </div>
+                          <div class="pas-m4">
+                            <span class="pas-small">11-03去 11-04回</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="pas-li"   href="#"   aria-label="鹰潭至赣州往返车票，价格160元起，11-08去，11-10回">
+                        <div class="pas-image-container">
+                          <img class="pas-image"  src="./排行榜8.jpg" alt="鹰潭">
+                          <div class="pas-rank">3</div>
+                        </div>
+                        <div class="pas-content">
+                          <div class="pas-flex">
+                            <span class="flight-name">鹰潭⇌赣州</span>
+                            <span class="pas-price">¥
+                              <span class="pas-num">160</span>
+                              起
+                            </span>
+                          </div>
+                          <div class="pas-m4">
+                            <span class="pas-small">11-08去 11-10回</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="pas-li"   href="#"   aria-label="南昌至萍乡往返车票，价格140元起，11-10去，11-14回">
+                        <div class="pas-image-container">
+                          <img class="pas-image"  src="./排行榜9.jpg" alt="萍乡">
+                          <div class="pas-rank">4</div>
+                        </div>
+                        <div class="pas-content">
+                          <div class="pas-flex">
+                            <span class="flight-name">萍乡⇌南昌</span>
+                            <span class="pas-price">¥
+                              <span class="pas-num">140</span>
+                              起
+                            </span>
+                          </div>
+                          <div class="pas-m4">
+                            <span class="pas-small">11-10去 11-14回</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="pas-li"   href="#"   aria-label="宜春至吉安往返车票，价格40元起，11-10去，11-14回">
+                        <div class="pas-image-container">
+                          <img class="pas-image"  src="./排行榜10.jpg" alt="宜春">
+                          <div class="pas-rank">5</div>
+                        </div>
+                        <div class="pas-content">
+                          <div class="pas-flex">
+                            <span class="flight-name">宜春⇌吉安</span>
+                            <span class="pas-price">¥
+                              <span class="pas-num">40</span>
+                              起
+                            </span>
+                          </div>
+                          <div class="pas-m4">
+                            <span class="pas-small">11-10去 11-14回</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+                <div class="main-right" >
+                  <div class="title-cut">
+                    <ul>
+                      <li class="ch cur">
+                        <a href="#">新闻</a> |
+                      </li>
+                      <li>
+                        <a href="#">视频</a> |
+                      </li>
+                    </ul>
+                    <span class="link"></span>
+                  </div>
+                    <div class="main-box" id="news-container">
+                      <div class="list16">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 酒店推荐 -->
+                  <div class="hotel">
+                    <h3 class="hotel-title">酒店推荐</h3>
+                    <div class="hotel-tabs">
+                      <button>
+                        <span>南昌</span>
+                      </button>
+                      <button>
+                        <span>九江</span>
+                      </button>
+                      <button>
+                        <span>上饶</span>
+                      </button>
+                      <button>
+                        <span>萍乡</span>
+                      </button>
+                      <button>
+                        <span>宜春</span>
+                      </button>
+                      <button>
+                        <span>吉安</span>
+                      </button>
+                      <button>
+                        <span>赣州</span>
+                      </button>
+                      <button>
+                        <span>更多 ∨</span>
+                      </button>
+                    </div>
+
+                    <div class="swiper-content">
+                      <ul class="swiper-list">
+                        <div class="current">
+                          <a class="recommend-item" href="./hotal.html">
+                            <img class="hotel-img" src="./hotel1.jpg" alt="">
+                          </a>
+                          <div class="hotel-info">
+                            <h3 class="hotel-name" titel>
+                              <span>南昌古北熙悦酒店</span>
+                            </h3>
+                            <div class="hotel-level">
+                              <img src="./hotel_detail_icon_.png" alt="">
+                            </div>
+                            <div class="hotel-review">
+                                  <span class="score">
+                                    4.8
+                                    <em class="total">/5</em>
+                                  </span>
+                              <span class="rating">棒</span>
+                              <span class="comment">2352点评</span>
+                            </div>
+                            <div class="price-box">
+                                  <span class="price-now">
+                                    <dfn>￥</dfn>
+                                    320
+                                  </span>
+                              <span class="tax"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="current">
+                          <div>
+                            <a class="recommend-item" href="./hotal1.html">
+                              <img class="hotel-img" src="./hotel2.jpg" alt="">
+                            </a>
+                            <div class="hotel-info">
+                              <h3 class="hotel-name" titel>
+                                <span>南昌上里阳光酒店</span>
+                              </h3>
+                              <div class="hotel-level">
+                                <img src="./hotel_detail_icon_diamond4.png" alt="">
+                              </div>
+                              <div class="hotel-review">
+                                  <span class="score">
+                                    4.5
+                                    <em class="total">/5</em>
+                                  </span>
+                                <span class="rating">棒</span>
+                                <span class="comment">1225点评</span>
+                              </div>
+                              <div class="price-box">
+                                  <span class="price-now">
+                                    <dfn>￥</dfn>
+                                    210
+                                  </span>
+                                <span class="tax"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="current">
+                          <div>
+                            <a class="recommend-item" href="./hotal2.html">
+                              <img class="hotel-img" src="./hotel3.jpg" alt="">
+                            </a>
+                            <div class="hotel-info">
+                              <h3 class="hotel-name" titel>
+                                <span>九江汉庭酒店</span>
+                              </h3>
+                              <div class="hotel-level">
+                                <img src="./hotel_detail_icon_.png" alt="">
+                              </div>
+                              <div class="hotel-review">
+                                  <span class="score">
+                                    4.8
+                                    <em class="total">/5</em>
+                                  </span>
+                                <span class="rating">棒</span>
+                                <span class="comment">1354点评</span>
+                              </div>
+                              <div class="price-box">
+                                  <span class="price-now">
+                                    <dfn>￥</dfn>
+                                    170
+                                  </span>
+                                <span class="tax"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="current">
+                          <div>
+                            <a class="recommend-item" href="./hotal3.html">
+                              <img class="hotel-img" src="./hotel4.jpg" alt="">
+                            </a>
+                            <div class="hotel-info">
+                              <h3 class="hotel-name" titel>
+                                <span>上饶太和紫金大酒店</span>
+                              </h3>
+                              <div class="hotel-level">
+                                <img src="./hotel_detail_icon_.png" alt="">
+                              </div>
+                              <div class="hotel-review">
+                                  <span class="score">
+                                    4.7
+                                    <em class="total">/5</em>
+                                  </span>
+                                <span class="rating">棒</span>
+                                <span class="comment">4684点评</span>
+                              </div>
+                              <div class="price-box">
+                                  <span class="price-now">
+                                    <dfn>￥</dfn>
+                                    140
+                                  </span>
+                                <span class="tax"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </ul>
+                    </div>
+                  </div>
+      </div>
+
+
+      <!-- 最下面 -->
+<div class="footer">
+  <!-- 帮助中心 -->
+  <div class="help">
+    <div class="left">
+    <dl>
+      <dt>旅游资讯</dt>
+      <dd><a href="#">宾馆索引</a></dd>
+      <dd><a href="#">旅游索引</a></dd>
+      <dd><a href="#">攻略索引</a></dd>
+    </dl>
+    <dl>
+      <dt>关于我们</dt>
+      <dd><a href="#">网站简介</a></dd>
+      <dd><a href="#">网站地图</a></dd>
+      <dd><a href="#">业务资质</a></dd>
+    </dl>
+    <dl>
+    <dt>加盟合作</dt>
+    <dd><a href="#">合作加盟</a></dd>
+    <dd><a href="#">商旅合作</a></dd>
+    <dd><a href="#">旅游保险</a></dd>
+  </dl>
+    <dl>
+      <dt>售后服务</dt>
+      <dd><a href="#">售后政策</a></dd>
+      <dd><a href="#">退款说明</a></dd>
+      <dd><a href="#">取消订单</a></dd>
+    </dl>
+    <dl>
+      <dt>服务热线</dt>
+      <dd><a href="#">在线客服</a></dd>
+      <dd><a href="#">客队电话400-888-888</a></dd>
+      <dd><a href="#">工作时间 周一至周日8：00-18：00</a></dd>
+    </dl>
+  </div>
+  </div> 
+<!-- 版权 -->
+<div class="copyright">
+  <p>
+    <a href="#">关于我们</a>|
+    <a href="#">帮助中心</a>|
+    <a href="#">售后服务</a>|
+    <a href="#">商务服务</a>|
+    <a href="#">搜索推荐</a>|
+    <a href="#">友情链接</a>|
+  </p>
+</div>
+</div>
+
+      <script>
+        document.getElementById("loginForm").addEventListener("click", function(event) {
+          event.preventDefault(); // 阻止表单提交的默认行为
+          window.location.href = "http://localhost:8080/brand_case_war_exploded/"; // 跳转到登录页面
+        });
+
+      </script>
+
+      <script>
+<!--        搜索框实现查询-->
+new Vue({
+  el: "#app",
+  data: {
+    keyword: ""
+  },
+  computed: {
+    isValidKeyword() {
+      return this.keyword.trim() !== "";
+    }
+  },
+  methods: {
+    search: function() {
+      if (!this.isValidKeyword) {
+        return;
+      }
+
+      // 跳转到新页面并将关键词作为参数传递
+      window.location.href = "last.html?keyword=" + encodeURIComponent(this.keyword.trim());
+    },
+    clearText: function() {
+      this.keyword = ""; // 清空搜索框文本
+    }
+  }
+});
+      </script>
+
+      <script>
+<!--        新闻动态获取-->
+        $(document).ready(function() {
+          $.ajax({
+            url: 'news.php',
+            type: 'GET',
+            success: function(response) {
+              $('#news-container').html(response); // 将服务器返回的新闻内容插入到容器中
+            }
+          });
+        });
+      </script>
+</body>
+
+</html>

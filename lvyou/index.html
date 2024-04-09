@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.108.0">
+  <title>Signin Template · Bootstrap v5.3</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
+
+
+
+
+
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+  <style>
+
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="sign-in.css" rel="stylesheet">
+</head>
+<body class="text-center">
+
+<!-- 注册表单 -->
+<main class="form-signin w-100 m-auto">
+  <form action="process-form.php" method="POST">
+    <img class="mb-4" src="./imgs/bootstrap-logo.svg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" name="account" placeholder="account">
+      <label for="floatingInput">account</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="password">
+      <label for="floatingPassword">password</label>
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&#169; 2023</p>
+  </form>
+</main>
+<!-- 导入 Bootstrap JavaScript 脚本 -->
+<script src="./js/jquery-3.7.1.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script >
+  // 在页面加载完毕后检查是否有成功的消息
+  document.addEventListener('DOMContentLoaded', function() {
+    var searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('message') && searchParams.get('message') === 'success') {
+      alert("数据插入成功，点赞数据插入成功");
+      window.location.href = "last.html"; // 跳转到主页面
+    }
+  });
+
+</script>
+</body>
+</html>

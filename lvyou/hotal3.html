@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>酒店信息</title>
+    <link rel="stylesheet" href="hotal3.css">
+</head>
+<body>
+<h3 class="biaoti">酒店信息</h3>
+<hr>
+<div class="warpper container">
+    <br>
+    <p>酒店名称:上饶太和紫金大酒店</p>
+    <br>
+    <p>价格：140/晚</p>
+    <br>
+    <p>地址：上饶市罗桥街旭日大道8号</p>
+    <br>
+    <p>电话：0794</p>
+    <br>
+    <p>描述信息：赣菜，百城千店。</p>
+    <br>
+    <p>酒店图片：</p>
+    <br>
+    <img src="hotel4.jpg" height="225" width="300"/></div>
+<!-- 添加点赞和评论按钮 -->
+<div class="button">
+    <button id="likeBtn">点赞</button>
+    <button id="commentBtn" onclick="showCommentInput()">评论</button>
+</div>
+
+
+<!-- 添加评论输入框 -->
+<div id="commentInput" class="button" style="display: none;">
+<input type="text" placeholder="请输入评论">
+    <button id="submit" onclick="submitComment()">发布评论</button>
+</div>
+
+<!-- 添加更多酒店信息 -->
+
+<script>
+    function showCommentInput() {
+        var commentInput = document.getElementById("commentInput");
+        commentInput.style.display = "block";
+    }
+
+    function submitComment() {
+        var commentInput= document.getElementById("commentInput");
+        commentInput.style.display="none";
+    }
+    $("#likeBtn").click(likeButtonClick);
+    $("#submit").click(commentButtonClick);
+
+    function likeButtonClick() {
+        $.ajax({
+            url: "http://localhost:8080/brand_case_war_exploded/ServletLikes",
+            type: "POST",
+            dataType: "json",
+            data:{action:"likes",postId:4},
+            success: function(response) {
+                // 在页面中更新点赞数
+                console.log(response);
+            }
+        });
+    }
+
+    function commentButtonClick() {
+        $.ajax({
+            url: "http://localhost:8080/brand_case_war_exploded/ServletLikes",
+            type: "POST",
+            data:{action: "cmments",postId: 4,comment: comment},
+            dataType: "json",
+            success: function(response) {
+                // 在页面中更新评论数
+                console.log(response);
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,736 @@
+
+ body{
+    background-image: url(.//wangyetupian/背景图3.jpg);
+    background-repeat:no-repeat;
+      background-position: top;
+      background-attachment: fixed;
+  }
+  .wrapper{
+    width:1240px ;
+    margin: 0 auto;
+  }
+  /* 头部区域 */
+  .header{
+    height: 100px;
+    background-color: #ffffff;
+}
+.header .wrapper{
+  padding-top: 29px;
+  display: flex;
+}
+/* logo区域 */
+
+.logo{
+  display: flex;
+  width: 159px;
+  height: 71px;
+  text-align: center;
+
+}
+.logo a{
+  display: block;
+  width: 159px;
+  height: 71px;
+  background-image: url(./wangyetupian/logo.jpg) ;
+    background-position:center;
+  font-size: 0;
+  transform: translateY(-18px);
+}
+
+/* 导航区域 */
+.nav ul{
+  margin: 100px;
+  display: flex;
+}
+
+
+.nav{
+  width: 400px;
+  height: 40px;
+  margin: 100px auto;
+  perspective: 500px;
+  transform: translateY(-196px) translateX(-140px);
+  transition: all 2s;
+}
+
+
+.nav li{
+
+  position: relative;
+    float: left;
+    display: block;
+    list-style: none;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+
+  /* transform: scale3d(0.8,0.8,3); */
+}
+
+.nav li a{
+  position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+  /* cursor: pointer; */
+}
+
+.nav li a:first-child{
+  background-color: #0093cd97;
+  transform: translateZ(20px);
+  border-radius: 0px 30px 0px 30px;
+}
+
+.nav li a:last-child{
+  background-color: rgba(240, 147, 60,0.5);
+  border-radius: 30px 0px 30px 0px;
+  transform: rotateX(90deg) translateZ(20px);
+}
+
+.nav li:hover{
+  transform: rotateX(-90deg);
+}
+
+/* 搜索 */
+.search{
+  display: flex;
+  margin-left: 64px;
+  padding-left: 19px;
+  padding-right: 12px;
+  width: 412px;
+  height: 40px;
+  background-color: #f3f5f7;
+  border-radius: 20px;/* 胶囊形状 */
+  border-radius: 20px;
+    border-width: thick;
+    border-style: outset;
+    border-color: #298fb3c2;
+}
+
+.search input{
+  flex: 1;
+  border: 0;
+  background-color: transparent;/* 透明背景色 */
+  outline: none;/* 去掉表单控件的焦点框 */
+}
+
+/* ::placeholder 选中就是 placeholder 属性文字样式*/
+.search input::placeholder{
+  font-size: 14px;
+  color: #999;
+}
+
+/* 父级是弹性盒子，子级宽高生效 */
+.search a{
+  align-self: center;/* 垂直方向居中 */
+  width: 16px;
+  height: 16px;
+  background-image: url(./wangyetupian/搜索.jpg);
+}
+
+/* 用户 */
+.user{
+  margin-left: 32px;
+  margin-top: 4px;
+}
+
+.iusnp {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: #f2f8fe;
+  border-style: none;
+  border-radius: 16px 16px 16px 16px;
+  padding: 4px 8px 4px 8px;
+}
+
+.user img{
+margin-right: 7px;
+  /* vertical-align 行内块和行内垂直方向对齐方式 */
+  vertical-align: middle;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.user span{
+  font-size: 16px;
+  color: #666;
+}
+  
+    ul{
+      list-style: none;
+    }
+    
+    .tuijian{    
+      height: 480px;
+      background-color: rgba(104, 99, 109, 0.189); 
+    }
+ /* 左导航 */
+    .address{
+      z-index: 100;
+      float: left;
+      position: absolute;
+      margin-left: 50px; 
+      /* width: 260px; */
+      height: 440px;
+       margin: 20px 50px; 
+  background-color: #0093cd66;
+  line-height: 44px;
+    }
+    .address h2{
+      margin-top: 10px;
+      margin-left: 30px;
+      padding: 0 20px;
+      color: #fff;
+      font-weight: 400;
+    }
+    .address span{
+      float: right;
+      padding: 0 20px;
+    }
+
+    /* 左导航字 */
+    .address .wenan{
+      margin-top: 20px;
+      padding: 0 40px;
+      font-size: 16px;
+      color: #fff;
+    }
+    .address .wenan a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .address .wenan a:hover{
+      color: #233335;
+    }
+  
+    /* 轮播图 */
+    .tuijian .lubotu{
+      margin: 0px auto;
+      padding: 19px 4px;
+      float: none;
+      width: 836px;
+      height: 466px;
+      
+    }
+
+    /* 右导航（我的行程） */
+    .small{
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      transform: translateX(230px);
+      /* border: 1px solid #000; */
+    }
+
+    .floatbox{
+     display: flex;
+      align-items: center;
+      position: fixed;/* 设为浮窗 */
+      z-index: 999;/* 置于图层顶层 */
+      top: 100px;
+      right: 30px;
+      cursor: pointer;/* pionter光标变成小手指 */
+      transform: translateX(20px);
+      transition: all 1s;
+    }
+/* 浮窗按钮 */
+    .show-button {
+      display: flex;
+      float: left;
+      margin-top: 60px;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 60px;
+      background-color: #4545454e;
+      border-style: none;
+      border-radius: 10px 0 0 10px;
+    }
+    .tuijian .right{
+      margin-top: 60px;      
+      width: 218px;
+      height: 305px;
+      background-color: #0093cd66;
+      border-radius: 10px;
+  }
+ 
+    
+  .floatbox:hover{
+    transform: translateX(-230px);
+  }
+
+  .tuijian .right h3{
+      margin-left: 14px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 15px;
+      color: #fff;
+      font-weight: 400;
+  }
+  
+  .tuijian .right .content{
+      padding: 14px;
+      height: 257px;
+      background-color: #fff;
+      border-radius: 10px;
+  }
+  
+  .tuijian .right dl{
+      margin-bottom: 12px;/* 底部间距 */
+      border-bottom: 1px solid #e0e0e0;/* 下划线 */
+  }
+  .tuijian .right dt a{
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+  }
+  
+  .tuijian .right dd{
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 16px;
+  }
+  
+  .tuijian .right dd span{
+      color: #00a4ff;
+  }
+  
+  .tuijian .right dd strong{
+      color: #7d7d7d;
+      font-weight: 400;
+  }
+  
+  .tuijian .right .a1{
+      display: block;
+      height: 32px;
+      background-color: #00a4ff;
+      text-align: center;/* 水平居中 */
+      line-height: 32px;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 15px;
+  }
+
+/* 内容 */
+  .box{
+    margin: 0 auto;
+    /* width: 1240px; */
+    height: 1300px;
+    /* background-color: #a6d7df; */
+  }
+  .yinying{
+
+    box-shadow: 2px 5px 10px 1px rgb(0,0,0,5);
+  }
+    .food{
+      float: left;
+      padding: 24px;
+      margin-left: 115px;
+      /* width: 610px; */
+      height: 1300px;
+      margin-top: 20px;
+    }
+    .food h2{
+      margin: 10px ; 
+      text-align: center;
+      color: #201f1f;
+    }
+    .food h2 img{
+      height: 70px;
+      transform: translateY(10px);
+    }
+
+    /* 美食推荐 */
+    .nav1{
+      margin-top: 20px;
+      height: 40px;
+      background-color: rgba(240, 147, 60, 0.258);
+    }
+    .nav1 ul{
+      display: flex;
+    }
+    .nav1 li{
+      float: left;
+      flex: 1;
+    }
+    .nav1 li a{
+      padding: 0 60px;
+      /* width: 122px; */
+      height: 40px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 20px;
+      line-height: 40px;
+      color: #fff;
+      border-right: 1px solid #e0e0e0;
+    }
+    .nav1 ul li:last-child a{
+      border-right: 0;
+    }
+    .nav1 li a:hover{
+background-color: #0093cd5c;
+    }
+
+    .bd{
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 2px 5px 10px 1px rgb(0,0,0,5);
+  }
+/* 美食左边（一图+二行） */
+    .bd .left{
+      width: 630px;      
+      background-color: #ffffffaf;
+      margin-left: 0;
+     /*  box-shadow: 2px 5px 10px 1px rgb(0,0,0,5); */
+    }
+    .one{
+      margin-top: 0px;
+      width: 610px;
+      height: 200px;
+       background-color: #fff; 
+    }
+    /* 美食右边（三行） */
+    .bd .right{
+      width: 610px;
+      background-color: #ffffffaf;
+      margin-right: 0;
+     /*  box-shadow: 2px 5px 10px 1px rgb(0,0,0,5); */
+    }
+    
+    .bd ul{
+      display: flex;
+      width: 610px;
+      height: 200px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* border-bottom: 0.5px solid lightslategray; */
+    }
+
+    .bd li .pic{
+      width: 310px;
+      height: 200px;
+      transform: translateX(-32px);
+    }
+
+    .bd li .text{
+      width: 290px;
+      transform: translateX(260px) translateY(-200px);
+      margin-left: 24px;
+    }
+
+    .bd li h2{
+      font-weight: 700;
+    font-size: 27px;
+    color: #222426;
+    margin-right: 8px;
+    margin-top: 12px;
+    line-height: 0.2rem;
+    font-family: 宋体;
+      transform: translateY(15px);
+    }
+.bd li a{
+  text-decoration: none;
+    }
+    .bd li p{
+      font-size: 20px;
+    color: #858687;
+    /* line-height: 0.14rem; */
+    margin-right: 0.06rem;
+    margin-top: 33px;
+    white-space: nowrap;
+    }
+
+    .bd li .score{
+      color: #ff8000;
+    font-size: 26px;
+    font-weight: 500;
+    }
+
+    .bd li .grade{
+      color: #ff8000;
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .bd li p i{
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .bd li p strong{
+      color: #858687;
+      font-weight: 400;
+    }
+
+    .bd li span{
+      float: right;
+      font-size: 13px;
+      font-weight: 552;
+      font-family: 宋体, serif;
+      color: rgb(255 165 74);
+      background-color: rgba(255, 248, 225, 0.8); /* 设置背景颜色的透明度为 50% */
+      border-radius: 6px; /* 设置边框的圆角大小为 6px */
+      margin-left: 4px;
+}
+
+    .bd li span img{
+      margin-right: 1px;
+      /* vertical-align 行内块和行内垂直方向对齐方式 */
+      vertical-align: middle;
+      height: 20px;
+      border-radius: 50%;
+    }
+    
+/* 计划攻略 */
+    .course{
+      margin-top: 40px;
+      height: 20px;
+  }
+
+.hd{
+  display: flex;
+  /* justify-content: space-between; *//* 主轴对齐方式 */
+  height: 80px;
+  line-height: 60px;
+  /* background-color: #ffffffaf; */
+}
+/* 路线规划 */
+.hd h3{
+  font-size: 21px;
+  font-weight: 400;
+  /* 原来有字我换成图了所以有个h3 */
+}
+
+.hd h3 img{
+  width: 230px;
+  transform: translateY(-35px);
+}
+
+.hd a{
+  text-decoration: none;
+}
+
+.hd ul{
+  display: flex;
+  transform: translateX(150px);
+}
+
+.hd li{
+  margin-right: 60px;
+  font-size: 25px;
+}
+
+.hd li .active{
+  color: #00a4ff;
+}
+
+.hd li .active,
+.hd li a:hover {
+  color: #00a4ff;
+  border-bottom: 2px solid #00a4ff;
+}
+
+/* 下拉列表 */
+.city {
+  position: relative;
+  /* float: right; */
+  margin-left: 385px;
+  color: #666666;
+  font-size: 18px;
+}
+.city select {
+  border: 1px solid gray;
+  font-size: 16px;
+  color: #666;
+  padding: 4px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* 路线内容 */
+.bd1{
+  background-color: #ffffffaf;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px 0px 0px 15px;
+  box-shadow: 2px 5px 10px 1px rgb(0,0,0,5);
+}
+
+/* 左侧广告图 */
+.bd1 .left1{
+  position: relative;
+    width: 228px;
+    /* background-color: pink; */
+
+   
+}
+
+.bd1 img{
+  width: 100%;
+  transition: all 0.5s;
+  border-radius: 15px;
+  
+}
+
+.bd1 .left1:hover img{
+transform: scale(1.1);
+}
+/* 右边 */
+/* 路线内容 */
+.bd1 .right1{
+  height: 400px;
+    width: 1000px;
+    margin-right: 10px;
+    /* background-color: orange; */
+    /* box-shadow: 2px 5px 10px 1px rgb(0,0,0,5); */
+}
+.bd1 ul{
+  display: flex;
+  flex-wrap: wrap;/* 弹性换行 */
+  justify-content: space-between;
+}
+
+.bd1 li{
+  margin-bottom: 14px;
+  width: 228px;
+  height: 271px;
+  /* background-color: pink; */
+}
+
+.bd1 li .pic{
+  height: 156px;
+}
+
+.bd1 li .text{
+  padding: 16px;
+  height: 115px;
+  background-color: #ffffffc8;
+  transform: translateY(143px);
+}
+
+.bd1 a{
+  text-decoration: none;
+}
+/* 笔记标题 */
+.bd1 li .text h4{
+  height: 52px;
+  font-size: 18px;
+  /* line-height: 20px; */
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  padding: 4px
+}
+/* 图下面的盒子整体 */
+.bd1 li .text .p1{
+  font-size: 18px;
+  line-height: 20px;
+  color: #999;
+  text-decoration: none;
+}
+/* 点赞、评论图标 */
+.bd1 li .text .p1 span{
+  font-size: 25px;
+  color: #3e3e3e;
+}
+
+.bd1 li .text .p1 i{
+  font-style: normal;
+  font-size: 25px;
+  color: #3e3e3e;
+}
+  
+/* 笔记作者 */
+.bd1 .right1 .writer{
+  float: inline-end;
+  white-space: norap;
+}
+
+.bd1 .text .writer img{
+  margin-right: 1px;
+      /* vertical-align 行内块和行内垂直方向对齐方式 */
+      vertical-align: middle;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+}
+
+.bd1 .text .writer{
+  float: right;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+    text-decoration: none;
+  }
+
+/* 帮助中心 */
+.footer {
+  background: #ffffff8b;
+  margin-top: 125px;
+}
+
+.help {
+  margin-top: 20px;
+  display: flex;
+  height: 200px;
+  min-width: 1080px;
+  /* 垂直居中 */
+  align-items: center;
+  /* 水平居中 */
+  justify-content: center;
+}
+/* left */
+.help .left {
+  display: flex;
+}
+.help .left dl {
+  margin-right: 84px;
+}
+.help .left dl:last-child {
+  margin-right: 0;
+}
+.help .left dt {
+  color: black;
+  margin-bottom: 30px;
+  font-size: 18px;
+  padding-left: 36px;
+}
+.help .left dd {
+  margin-bottom: 10px;
+  transform: translateX(37px);
+}
+.help .left a {
+  color: #333333;
+}
+
+/* 版权 */
+.copyright {
+  text-align: center;
+}
+.copyright p {
+  color: #a1a1a1;
+}
+.copyright p a {
+  margin: 0 10px;
+  color: #333333;
+}
+
+
+
+.buse{
+  background-color: rgba(207, 206, 206, 0.868);
+}
+
+ 

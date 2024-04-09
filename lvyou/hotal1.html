@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>酒店信息</title>
+    <link rel="stylesheet" href="hotal1.css">
+</head>
+<body>
+<h3 class="biaoti">酒店信息</h3>
+<hr>
+<div class="warpper container">
+    <br>
+    <p>酒店名称:南昌上里阳光酒店</p>
+    <br>
+    <p>价格：210/晚</p>
+    <br>
+    <p>地址：南昌市南昌县创新一路徐家万事达瑶湖店</p>
+    <br>
+    <p>电话：0792</p>
+    <br>
+    <p>描述信息：影音房投影效果非常好，近地铁口。</p>
+    <br>
+    <p>酒店图片：</p>
+    <br>
+    <img src="hotel2.jpg" height="225" width="300"/></div>
+<!-- 添加点赞和评论按钮 -->
+<div class="button">
+    <button id="likeBtn">点赞</button>
+    <button id="commentBtn" onclick="showCommentInput()">评论</button>
+</div>
+
+<!-- 添加评论输入框 -->
+<div id="commentInput" class="button" style="display: none;">
+    <input type="text" placeholder="请输入评论">
+    <button id="submit" onclick="submitComment()">发布评论</button>
+</div>
+
+<!-- 添加更多酒店信息 -->
+<script>
+function showCommentInput() {
+var commentInput = document.getElementById("commentInput");
+commentInput.style.display = "block";
+}
+
+function submitComment() {
+var commentInput= document.getElementById("commentInput");
+commentInput.style.display="none";
+}
+$("#likeBtn").click(likeButtonClick);
+$("#submit").click(commentButtonClick);
+
+function likeButtonClick() {
+$.ajax({
+url: "http://localhost:8080/brand_case_war_exploded/ServletLikes",
+type: "POST",
+dataType: "json",
+success: function(newLikes) {
+// 在页面中更新点赞数
+$("#likesCount").text(newLikes);
+}
+});
+}
+
+function commentButtonClick() {
+$.ajax({
+url: "http://localhost:8080/brand_case_war_exploded/ServletLikes",
+type: "POST",
+dataType: "json",
+success: function(newComments) {
+// 在页面中更新评论数
+$("#commentsCount").text(newComments);
+}
+});
+}
+
+$.ajax({
+    url: 'http://localhost:8080/brand_case_war_exploded/ServletLikes',
+    type: 'POST',
+    data: {
+        action: 'like',
+        postId: postId
+    },
+    xhrFields: {
+        withCredentials: true // 允许发送Cookie
+    },
+    success: function(data) {
+        console.log('点赞成功');
+    },
+    error: function(xhr, status, error) {
+        console.error('点赞失败');
+    }
+});
+
+</script>
+</body>
+</html>

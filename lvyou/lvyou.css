@@ -1,0 +1,892 @@
+/* 头尾各个页面相同的样式 */
+/* 版心 */
+.warpper {
+  margin: 0 auto;
+  width: 1240px;
+}
+/*头部 */
+.top {
+  display: flex;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  height: 88px;
+  background-color: #fff;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  margin-top: -20px;
+  margin-right: 40px;
+  margin-left: 60px;
+  width: 200px;
+  height: 88px;
+}
+
+.logo a {
+  display: block;
+  width: 200px;
+  height: 88px;
+  background-image: url(./013.png);
+  font-size: 0;
+}
+.home-header{
+  width: 81px
+}
+/* 搜索 */
+/* 搜索 */
+.search {
+  display: flex;
+  justify-content: flex-start; /* 水平靠左对齐 */
+  align-items: center; /* 垂直居中 */
+  height: 40px;
+  margin-top: 36px;
+  margin-left: 40px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+}
+
+.searchTerm {
+  border: 3px solid #82c1e0;
+  border-right: none;
+  padding: 5px;
+  width: 469px;
+  height: 48px;
+  color: #bababa;
+  font-size: 14px;
+  border-radius: 5px 0 0 5px;
+  /* 表单轮廓线消失 */
+  outline: none;
+  /* 定义width和height时，它的参数值包括border和padding */
+  box-sizing: border-box;
+  position: relative; /* 添加相对定位 */
+}
+
+.searchButton {
+  cursor: pointer;
+  width: 80px;
+  height: 48px;
+  background: #82c1e0;
+  text-align: center;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url(./search_icon.png);
+  background-size: 20px 20px;
+  vertical-align: middle; /* 垂直居中 */
+}
+
+.searchButton:hover {
+  background-color: #6aa4c1;
+}
+
+.searchTerm:focus ~ .cursor {
+  animation: blink-caret 0.75s step-end infinite alternate;
+}
+
+@keyframes blink-caret {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #000; /* 光标颜色 */
+  }
+}
+
+/* 新增样式 */
+.searchButtonContainer {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+}
+
+/* 顶部右边 */
+/* 请登录 */
+.btn-wrap {
+  display: flex;
+  width: 800px;
+  justify-content: center;
+}
+.header-account {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.home-header-login {
+  position: relative;
+}
+.btn-wrap button {
+  border: none;
+  cursor: pointer;
+}
+.iusnp {
+  width: 86px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: #f2f8fe;
+  border-radius: 16px 16px 16px 16px;
+  padding: 4px 8px 4px 8px;
+}
+.pc-home-account {
+  width: 24px;
+  height: 24px;
+  background-image: url(./用户中心.png);
+  background-size: 24px 24px;
+}
+.home-header-login-title {
+  margin-left: 5px;
+
+  display: flex;
+}
+
+/* 注册 */
+.home-header-item {
+  margin-left: 20px;
+}
+.home-header-item button {
+  /* 背景颜色为透明 */
+  background-color: transparent;
+  color: #333333;
+}
+
+/* 订单 */
+.order {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+}
+.home-dingdan {
+  width: 20px;
+  height: 24px;
+  background-image: url(./项目.png);
+  background-size: 20px 24px;
+}
+/* 充值 */
+.home-chongzhi {
+  width: 24px;
+  height: 24px;
+  background-image: url(./聚合支付.png);
+  background-size: 24px 24px;
+}
+/* 导航 */
+nav {
+  background-color: #7ac1e5bf;
+  height: 50px;
+}
+nav ul {
+  /* 列表项前无标记 */
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  font-weight: bold;
+  line-height: 50px;
+  flex: 1;
+  text-align: center;
+}
+nav li a {
+  font-size: 20px;
+  color: whitesmoke;
+}
+nav li a:hover {
+  border-bottom: 2px solid #3f86a9;
+  color: #3f86a9;
+}
+
+/* 轮播图 */
+/* reset */
+body {
+  padding: 0;
+  margin: 0;
+}
+/* banner */
+.banner {
+  margin-top: 24px;
+  height: 285px;
+  background-image: url(../images/轮播图7.jpg);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  width: 984px;
+  /* 上下外边距为0，左右自适应，也就是让它自动居中 */
+  margin: 0 auto;
+  height: 285px;
+}
+.content .piclist {
+  display: flex;
+  overflow: hidden;
+}
+.content .piclist .pic {
+  /* 绝对定位 */
+  position: absolute;
+}
+.content .piclist .pic img {
+  /* 调整图片大小 */
+  height: 285px;
+  width: 984px;
+}
+.up {
+  /* 设置z-index的元素一定要进行定位才行，默认值static也是不生效的 */
+  z-index: 100;
+}
+
+/* reset */
+body,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.content .dotlist {
+  /* 浮动布局，让所有li元素在一行排列 */
+  display: flex;
+  /* 绝对定位后，让其偏移到相应位置（注意绝对定位是相对的，要先设置其父元素为相对定位 */
+  position: absolute;
+  /* 距离left底部5px */
+  bottom: 5px;
+  /* 居中 */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  justify-content: center;
+  /* 让小圆点处于最上面的一层 */
+  z-index: 1000;
+}
+.content .dotlist .dot {
+  /* 将a标签转换成块级元素，从而可以设置宽高 */
+  display: block;
+  /* 设置每个小圆点的边距 */
+  margin: 0 2px;
+  width: 20px;
+  height: 20px;
+  /* 给每个a标签换一个背景图，这个背景图就是白色小圆点 */
+  background: url(./05.png) 3px -343px;
+}
+.content .dotlist .dot.active,
+.content .dotlist .dot:hover {
+  background: url(./05.png) -16px -343px;
+}
+.content .button {
+  /* 变成块级元素 */
+  display: block;
+  width: 37px;
+  height: 63px;
+  /* 绝对定位，使其定位到相应的位置，同时设置content为相对定位 */
+  position: absolute;
+  /* 居中显示 */
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.content .left-btn {
+  /* 让它到content的外面去 */
+  left: -68px;
+  background: url(./05.png) 0 -360px;
+}
+
+.content .right-btn {
+  right: -68px;
+  background: url(./05.png) 0 -508px;
+}
+.content .left-btn:hover {
+  background: url(./05.png) 0 -430px;
+}
+
+.content .right-btn:hover {
+  background: url(./05.png) 0 -578px;
+}
+
+/* 底部 */
+/*图片 */
+.photo {
+  margin-top: 28px;
+  margin-bottom: 32px;
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 420px;
+}
+.photo::after {
+  content: "";
+  display: table;
+  /* 清除浮动 */
+  clear: both;
+}
+.photo .title {
+  border-bottom: 2px solid #eceef3;
+  display: block;
+  padding-left: 8px;
+  height: 30px;
+  margin-bottom: 14px;
+}
+.photo .title a {
+  line-height: 39px;
+  color: #757575;
+  font-family: "SimSun";
+  font-size: 16px;
+  float: right;
+  margin-top: -56px;
+  padding-right: 20px;
+}
+.photo .title h2 {
+  color: #82c1e0;
+  padding-bottom: 2px;
+  font-weight: 600;
+}
+
+.grid-container {
+  /* 自动调整列数，每列最小宽度为200px，如果空间允许，网格项将自动调整以填充可用的空间。 */
+  display: grid;
+  /* grid-template-columns属性定义了网格的列宽 */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* 用来设置网格行与列之间的间隙 */
+  grid-gap: 14px;
+  width: 800px;
+  height: 200px;
+  float: left;
+}
+
+.grid-item {
+  position: relative;
+}
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+.textbox {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  border: none;
+  /* 背景为全透明色 */
+  background-color: transparent;
+  font-size: 20px;
+}
+input::-webkit-input-placeholder {
+  color: #fff;
+}
+img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* 横图 加按钮 */
+.container {
+  display: flex;
+  float: right;
+  position: absolute;
+  right: 30px;
+}
+
+.image-container {
+  display: flex;
+  /* 灵活的项目将垂直显示，正如一个列一样。 */
+  flex-direction: column;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.image-item img {
+  width: 380px;
+  height: 168px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  /* 子元素向左平移了一段距离，这个距离是自己宽度的一半。这样就实现了水平居中 */
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  /* 定义元素在何时能被鼠标或触摸操作激活 */
+  pointer-events: none;
+}
+
+.text p {
+  margin: 0;
+  padding-top: -600px;
+  padding-bottom: 20px;
+}
+
+.text p:first-child {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.text p:last-child {
+  font-size: 14px;
+}
+
+.button-container {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.button-row {
+  display: flex;
+}
+
+.button-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.capsule-button {
+  /* 行内块元素 */
+  display: inline-block;
+  padding: 6px 36px;
+  border: none;
+  /* 同时设置4个边框的圆角样式。 */
+  border-radius: 20px;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  /* 光标为一只手 */
+  cursor: pointer;
+  /* 间距 */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.button-container button:hover {
+  background-color: #3f86a9; /* 鼠标悬停时的背景色 */
+  color: #3e3e3e; /* 鼠标悬停时的文本颜色 */
+}
+/* 当季热推 */
+.hot {
+  margin-top: 28px;
+  height: 654px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.hot-header {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.hot-title {
+  margin-left: 12px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #69b4da;
+  font-weight: bold;
+}
+.city {
+  position: relative;
+  /* float: right; */
+  margin-left: 130px;
+  margin-top: -26px;
+  color: #666666;
+  font-size: 18px;
+}
+.city select {
+  border: 1px solid gray;
+  font-size: 16px;
+  color: #666;
+  padding: 4px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+.recommend {
+  align-items: center;
+  display: flex;
+  float: left;
+  margin-top: 20px;
+  margin-left: 12px;
+  border-right: 3px solid #c2d4ed;
+  width: 870px;
+}
+.grop {
+  margin-left: 40px;
+  margin-right: 12px;
+  width: 380px;
+  height: 538px;
+  border-radius: 16px;
+  background: linear-gradient(-153.43deg, #f4fafd 0%, #e2f2fb 100%);
+}
+.pas-header {
+  display: flex;
+  line-height: 50px;
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding-top: 6px;
+}
+img {
+  border: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+.pas-rul {
+  height: 477px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px 8px 8px 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 9px 8px 0 8px;
+}
+.pas-li {
+  text-align: -webkit-match-parent;
+  display: flex;
+  cursor: pointer;
+  height: 89px;
+  margin-bottom: 8px;
+  color: #333333;
+}
+.pas-image-container {
+  position: relative;
+  top: 2px;
+}
+.pas-flex {
+  justify-content: space-between;
+  display: flex;
+}
+.pas-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.pas-name {
+  display: flex;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 限制在一个块元素显示的文本的行数 */
+  -webkit-line-clamp: 2;
+  /* 溢出隐藏:该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。 */
+  overflow: hidden;
+  /* 从上到下垂直排列子元素 */
+  -webkit-box-orient: vertical;
+  font-weight: bold;
+  width: calc(100% - 80px);
+}
+.pas-price {
+  color: #0086f6;
+  font-size: 12px;
+}
+.pas-num {
+  font-size: 16px;
+  font-weight: 600;
+}
+.pas-content {
+  padding: 4px 16px 0 16px;
+}
+.pas-small-score {
+  color: #0086f6;
+  margin-right: 4px;
+}
+.pas-small {
+  color: #666;
+  font-size: 12px;
+}
+.pas-m4 {
+  margin-top: 4px;
+}
+.pas-rank {
+  position: absolute;
+  border-radius: 0px 100px 100px 0px;
+  height: 18px;
+  width: 14.34px;
+  top: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  padding-left: 4px;
+  line-height: 18px;
+  background: #f63b2e;
+}
+
+.pas-flight {
+  background: linear-gradient(26.57deg, #e6ecfc 0%, #f4f6fd 100%);
+  position: relative;
+  border-radius: 8px;
+  height: 548px;
+  width: 380px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.flight-name {
+  display: flex;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  font-weight: bold;
+  margin-right: 94px;
+}
+/* 新闻 */
+.main-right {
+  display: flex;
+  float: left;
+  /* 行内元素会在一条直线上排列 */
+  display: inline;
+  margin-left: 50px;
+  width: 500px;
+}
+.title-cut {
+  height: 61px;
+  position: relative;
+  top: -2px;
+  margin-bottom: 24px;
+  border-bottom: 3px solid #c2d4ed;
+}
+.title-cut ul {
+  float: left;
+  height: 61px;
+  overflow: hidden;
+}
+.title-cut ul li {
+  padding: 14px 20px 0;
+  float: left;
+  font-size: 26px;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+  color: #404040;
+  height: 47px;
+}
+.title-cut ul li a {
+  color: #69b4da;
+}
+.main-box {
+  float: right;
+  display: inline;
+}
+.news-content{
+  margin: 0 auto 15px;
+  line-height: 28px;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #404040;
+  text-decoration: none;
+}
+.news-content:before {
+  float: left;
+  content: "";
+  background: #ccc;
+  min-width: 4px;
+  width: 4px;
+  height: 4px;
+  overflow: hidden;
+  margin: 13px 11px 0 0;
+  border-radius: 2px;
+}
+.news-content:hover {
+  border-bottom: 2px solid #69b4da;
+  color: #69b4da;
+}
+/* 酒店推荐 */
+.hotel {
+  border-top: 3px solid #c2d4ed;
+  margin-top: 60px;
+}
+.hotel-title {
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+}
+.hotel-tabs {
+  text-align: center;
+  justify-content: center;
+  height: 64px;
+}
+.hotel-tabs button {
+  background-color: #fff;
+  padding: 8px 20px;
+  border: 2px solid #ccc; /* 初始状态下边框有颜色 */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* 添加过渡效果 */
+  border-radius: 0.375rem;
+  font-size: 17px;
+}
+.hotel-tabs button:hover {
+  background-color: #a6a9ad; /* 鼠标悬停时的背景色 */
+  color: #3e3e3e; /* 鼠标悬停时的文本颜色 */
+}
+.swiper-content {
+  display: flex;
+  /* content大小不变，以content为基准向外“添加”padding，撑大了border; */
+  box-sizing: content-box;
+}
+.swiper-list {
+  justify-content: center;
+  width: 1740px;
+  min-height: 380px;
+
+  height: 100%;
+  display: flex;
+}
+.current {
+  width: 290px;
+  margin: 0px;
+}
+.recommend-item {
+  display: block;
+  width: 278px;
+}
+.hotel-image {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 197px;
+}
+.hotel-info {
+  box-sizing: border-box;
+  padding-top: 8px;
+  min-height: 130px;
+}
+.hotel-name {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.3;
+  overflow: hidden;
+}
+.hotel-level {
+  margin-top: 2px;
+}
+.hotel-level img {
+  height: 16px;
+  width: auto;
+  margin-bottom: 2px;
+}
+.hotel-review {
+  margin-top: 2px;
+  font-size: 14px;
+}
+.hotel-review .score {
+  margin-right: 5px;
+  font-size: 16px;
+  color: #fff;
+  padding: 1px 4px;
+  background: #4978ce;
+  border-radius: 4px 4px 0 4px;
+}
+.total {
+  margin-left: 2px;
+  font-size: 12px;
+  color: #a8ccff;
+}
+.rating {
+  margin-right: 5px;
+  color: #4978ce;
+  font-weight: 700;
+}
+.comment {
+  color: #8592a6;
+}
+.price-box {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.price-now {
+  font-size: 18px;
+  font-weight: 700;
+  color: #287dfa;
+}
+.tax {
+  font-size: 14px;
+  color: #8592a6;
+  text-align: right;
+  line-height: 18px;
+  margin-left: 5px;
+}
+/* 帮助中心 */
+.footer {
+  background: #f8fafd;
+}
+
+.help {
+  display: flex;
+  height: 200px;
+  min-width: 1080px;
+  /* 垂直居中 */
+  align-items: center;
+  /* 水平居中 */
+  justify-content: center;
+}
+/* left */
+.help .left {
+  display: flex;
+}
+.help .left dl {
+  margin-right: 84px;
+}
+.help .left dl:last-child {
+  margin-right: 0;
+}
+.help .left dt {
+  color: black;
+  margin-bottom: 30px;
+  font-size: 18px;
+  padding-left: 36px;
+}
+.help .left dd {
+  margin-bottom: 10px;
+}
+.help .left a {
+  color: #969696;
+}
+
+/* 版权 */
+.copyright {
+  text-align: center;
+}
+.copyright p {
+  color: #a1a1a1;
+}
+.copyright p a {
+  margin: 0 10px;
+  color: #a1a1a1;
+}
+
+/* 登录框 */
+
+.login-box {
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  width: 400px;
+  z-index: 9999;
+}

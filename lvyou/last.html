@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Album example · Bootstrap v5.3</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="last.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="last.js"></script>
+
+  </head>
+  <body>
+  <div id="app">
+  <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="lvyou.html" class="nav-link px-2 link-secondary">返回首页</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">热门文章</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">精华帖子</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">行程计划</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">进入主页</a></li>
+            <li><a class="dropdown-item" href="#">设置</a></li>
+            <li><a class="dropdown-item" href="#">关于我们</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="./index.html">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<main>
+
+  <section class="py-5 text-center container section-bg">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">游客投稿</h1>
+        <p class="lead text-muted">关于下面-来自各地用户上传的图片及感受，帮助浏览网站的游客更好的了解江西</p>
+        <p>
+          <a href="#"  class="btn btn-primary my-2">回到顶端</a>
+
+          <a href="#" class="btn btn-secondary my-2">继续往下看</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last1.jpg" width="100%" height="100%"></image>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">说到江西，很多人会想到千年瓷都景德镇.与景德镇相邻的上饶也是极美的，上榜国家地理的宝藏小城，自然风光秀美，历史人文底蕴深厚，且非常小众。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="abc123"  id="likeButton">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.01.20</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last2.jpg" width="100%" height="100%"></image>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">终于去了被种草很久的江西上饶望仙谷.如果你梦见过仙境，那望仙谷便是现实版的仙境世界，山水之间，悬崖之上，隐世仙谷，华灯初上便是仙侠玄幻</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="def456">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.09.07</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last3.jpg" width="100%" height="100%"></image>
+            <div class="card-body">
+              <p class="card-text">11/12月的婺源石城红叶与朝雾，不管是拍照还是驻足观望，都让人深刻体会到婺源的秋之美。石城拥有绝美的日出景观,石城红枫高大挺拔，最为吸睛。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="ghi789">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.10.15</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last4.jpg" width="100%" height="100%"></image>
+            <div class="card-body">
+              <p class="card-text">我在江西发现了一个避世神仙古村-上饶葛仙村.恍若宫崎骏“千与千寻”的神秘世界.这儿远离城市喧嚣，烟雾缭绕宛如仙境</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="jkl012">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.08.09</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last5.jpg" width="100%" height="100%"></image>
+            <div class="card-body">
+              <p class="card-text">江西有这么一个城市,名气或许不及“千年瓷都”景德镇,但它的许多景点你一定有所耳闻.比起景德镇的精致小资,这里的壮阔山水更有一番风韵</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="mno345">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.12.03</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last6.jpg" width="100%" height="100%"></image>
+            <div class="card-body">
+              <p class="card-text">江西，一片瑰丽的土地，我来到这里，首先踏上庐山，高山流水间，令人陶醉。云雾缭绕，岩石峭壁，仿佛走进了仙境，心旷神怡，此行已值回票价。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="pqr678">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.12.06</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last7.jpg" width="100%" height="100%"></image>
+            <div class="card-body">
+              <p class="card-text">我来到赣州的龙虎山，这座历史悠久的名山，佛光普照，传承着深厚的文化底蕴。登山迎佛，香火缭绕，心灵得到净化，感受到了内心的宁静与平和</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="stu901">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.09.07</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last8.jpg" width="100%" height="100%"></image>
+            <div class="card-body">
+              <p class="card-text">鄱阳湖，这片广袤的湖泊，是江西的明珠。湖水碧波荡漾，荷花盛开，给人一种恬静宜人的感觉。在湖畔散步，呼吸着新鲜空气，仿佛与自然融为一体。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="vwx234">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.11.11</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last9.jpg" width="100%" height="100%"></image>
+            <div class="card-body">
+              <p class="card-text">南昌，这座英雄的城市，八一起义纪念馆成为了我必到之处。红色记忆在这里永存，革命先辈们的事迹感动人心，站在他们曾经战斗的土地上，我倍感荣耀</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="yza567">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.05.28</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last10.jpg" width="100%" height="100%"></image>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">景德镇，这里是中国陶瓷的故乡。参观陶艺博物馆，了解陶瓷的制作工艺和历史渊源，欣赏到了精美的陶瓷作品，感受到了传统文化的博大精深。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="bcd890">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.09.31</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last11.jpg" width="100%" height="100%"></image>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">婺源，这座美丽的小镇，宛如画中仙境。溪水潺潺，青山环绕，古朴的建筑与自然景色相得益彰。漫步于小巷间，仿佛穿越时光隧道，回到了古代的江南。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="efg123">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.09.13</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last12.jpg" width="100%" height="100%"></image>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">庐山风景区，这里有奇峰异石、清泉瀑布，还有壮丽的云海。站在山巅，俯瞰山下的美景，心旷神怡。登顶五老峰，云雾缭绕，仿佛置身仙境。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="hij456">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.10.10</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last13.jpg" width="100%" height="100%"></image>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">赣江风光，一条奔腾的江流，连接着江西的南北。沿江而行，可以欣赏到江南水乡的风情和古老城市的韵味。夜晚的赣江灯火辉煌，美轮美奂。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="klm789">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.04.14</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last14.jpg" width="100%" height="100%"></image>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">井冈山，这片红色的热土，见证了中国革命的光辉历程。参观革命纪念碑，回望过去的岁月，心中涌动着敬意和感慨，向革命先烈致以崇高的敬意。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="nop012">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.09.08</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#fff"/>
+              <image xlink:href="imgs/last15.jpg" width="100%" height="100%"></image>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">江西的风景如诗如画，每一站都让我流连忘返。无论是山水还是人文，都给我留下了深刻的印象。江西，我会将这份美好的记忆永远珍藏在心。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-account="qwe153">点赞</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">评论</button>
+                </div>
+                <small class="text-muted">2023.01.11</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="container">
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <div class="col mb-3">
+      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <p class="text-muted">&copy; 2023</p>
+    </div>
+
+    <div class="col mb-3">
+
+    </div>
+
+    <div class="col mb-3">
+      <h5>关于我们</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">用户协议</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">加入我们</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">隐私政策</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">安全中心</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">知识产权</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>旅游资讯</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">宾馆索引</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">攻略索引</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">网站导航</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">用车索引</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">旅游索引</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>加盟合作</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">业务合作</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">加入我们</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">友情链接</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">酒店加盟</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">代理合作</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+  </div>
+
+<script src="./js/jquery-3.7.1.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+  var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+    return new bootstrap.Dropdown(dropdownToggleEl);
+  });
+</script>
+
+
+  <script>
+<!--    搜索功能-->
+    new Vue({
+      el: "#app",
+      data: {
+        results: []
+      },
+      mounted() {
+        this.getSearchResults();
+      },
+      methods: {
+        getSearchResults: function() {
+          // 获取URL中的关键词参数
+          var keyword = new URLSearchParams(window.location.search).get("keyword");
+          if (!keyword) {
+            return;
+          }
+
+          // 发送GET请求到后端
+          var self = this;
+          var url = "search?keyword=" + encodeURIComponent(keyword);
+          axios.get(url)
+                  .then(function(response) {
+                    // 处理后端返回的查询结果
+                    self.results = response.data;
+                  })
+                  .catch(function(error) {
+                    console.error(error);
+                  });
+        }
+      }
+    });
+  </script>
+
+  <script >
+<!--    点赞功能-->
+
+    // 获取所有点赞按钮
+    var likeButtons = document.querySelectorAll('.btn-group .btn-outline-secondary');
+
+    // 遍历所有点赞按钮
+    likeButtons.forEach(function(button) {
+      // 为每个按钮添加点击事件监听器
+      button.addEventListener('click', function() {
+        var postAccount = this.dataset.account; // 从按钮的自定义属性中获取对应的帖子账号
+
+        // 发送 AJAX 请求到后端，更新点赞次数
+        $.ajax({
+          type: "POST",
+          url: "update-likes.php",
+          data: { account: postAccount },
+          success: function(response) {
+            // 更新成功后，可以根据返回的 response 进行相应处理
+            console.log('点赞次数更新成功');
+            alert('点赞成功！');  // 弹出点赞成功的弹窗
+          },
+          error: function(xhr, status, error) {
+            // 处理错误响应
+            console.error('点赞次数更新失败');
+          }
+        });
+      });
+    });
+  </script>
+
+
+  <script >
+<!--    按钮变红-->
+// 获取所有点赞按钮
+var likeButtons = document.querySelectorAll('.btn-group .btn-outline-secondary');
+
+// 遍历所有点赞按钮
+likeButtons.forEach(function(button) {
+  // 为每个按钮添加点击事件监听器
+  button.addEventListener('click', function() {
+    var originalColor = this.style.backgroundColor;  // 保存原始颜色
+    this.style.backgroundColor = 'red';  // 将按钮颜色设置为红色
+
+    // 使用 setTimeout 函数延迟恢复原来的颜色
+    setTimeout(function() {
+      button.style.backgroundColor = originalColor;  // 恢复原来的颜色
+    }, 2000);  // 2000 毫秒后恢复原来的颜色，可以根据需要调整时间
+  });
+});
+
+  </script>
+
+  </body>
+
+
+</html>
